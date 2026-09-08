@@ -19,6 +19,24 @@ Keep discovery work reversible and focused by separating active task instruction
 9. Handoffs are task-scoped compilations, not discovery-history summaries.
 10. New rules pass the Rulebook Growth Gate before becoming always-active.
 
+## Sprint and task context
+
+### Sprint Context Rule
+
+A sprint document is a planning source, not mandatory full execution context. For implementation or discovery execution, load only the sprint goal, scope, acceptance criteria, dependencies, risks or blockers that materially affect the current task. Read the full sprint only when the task is ambiguous, changes sprint scope, depends on another sprint item, or requires sprint-level planning or review.
+
+### Task as Execution Unit
+
+The task is the primary unit of execution context and handoff. A task should define, as needed: goal, business reason, in-scope work, out-of-scope work, acceptance criteria, relevant documents/modules, activated rules/ADRs, dependencies, task-scoped assumptions and verification/decision output. Small discovery tasks may keep this compact. Execution context is compiled around the current task rather than around the whole sprint.
+
+Task lifecycle should normally follow `BACKLOG -> READY -> IN_PROGRESS -> VERIFY -> DONE`, with `BLOCKED` when needed. `DONE` requires the applicable acceptance/verification or explicit decision gate; produced documentation or code alone is not completion.
+
+### Sprint Summary = Historical Context
+
+Sprint summaries record what actually happened and are historical evidence, not active instructions for later tasks. They are OFF by default. Load a previous sprint summary only when the current task needs evidence about what was decided or implemented, why a decision was made, a known limitation, or a dependency on prior work.
+
+Task-scoped assumptions expire with the task unless they are deliberately promoted to a durable invariant, ADR/decision or rule through the normal Rulebook Growth Gate.
+
 ## Rulebook Growth Gate
 
 Classify a new rule as Core invariant, domain/module rule, project invariant, ADR/product decision, verification/security check, or historical information. Only rare Core invariants are always loaded.
