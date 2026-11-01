@@ -47,6 +47,10 @@ Przetwarzanie i artefakty pochodne
 Publikacja / udostępnienie / archiwizacja
 ```
 
+## Granice ekosystemu
+
+Właścicieli domen PCG, Entra ID, UAG Attendance, NeoRepo i RepoOps Legacy oraz założenia integracji opisuje [ecosystem_boundaries.md](docs/architecture/ecosystem_boundaries.md). Migracja ClickMeeting → Teams pozostaje propozycją; nie rozszerza to obecnego MVP.
+
 ## Dokumentacja
 
 - [Wizja produktu](docs/product/vision.md)
